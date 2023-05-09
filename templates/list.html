@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+    <!-- denne siden vis databasen men viser ikke personen passord for personens sikkerhet-->
+    {% include 'menu.html' %}
+    <table style="width:70%">
+        <thead>
+            <td>username</td>
+            <td>phone number</td>
+            <td>epost</td>
+        </thead>
+
+        {% for row in rows %}
+
+        <tr>
+            <td>{{row['username']}}</td>
+            <td>{{row['number']}}</td>
+            <td>{{row['epost']}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    <a href="/">Go to homepage</a>
+    <br>
+    <br>
+    {% include 'footer.html' %}
+</body>
+</html>

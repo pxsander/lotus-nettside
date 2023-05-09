@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+</head>
+<body>
+    {% include 'menu.html' %}
+    <h1>login</h1>
+    <h2>{{msg}}</h2>
+    <!--dette er koden som jobber med å logeinn brukeren og sønder deg til riktig sted and på om du skriver riktig eller feil-->
+    <form action="{{url_for('testrec')}}" method="POST">
+        <h3>enter name and password</h3>
+        username<br>
+        <input type="text" name="username"><br>
+        pwd<br>
+        <input type="password" name="pwd"><br>
+        <input type="submit" value="submit"><br>
+    </form>
+    <br>
+    <a href="/signin"><button>sign in</button></a>
+    <br>
+    <a href="/"><button>back</button></a><br><br>
+    {% include 'footer.html' %}
+</body>
+</html>

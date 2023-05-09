@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+  </head>
+  <body>
+    <!--her er koden til hjemme siden du ville finne koden til bilde og knappen som mange andre sider har-->
+    {% include 'menu.html' %}
+    <table>
+      <tr> 
+        <td colspan="2" align="center">
+          <img width="35%" src="/static/Lotus.jpg" alt="lotus">
+          <br>
+          <a href="/aboutus"><button>about us</button>
+      </td>
+    </tr>
+    </table>
+    {% include 'footer.html' %}
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- dette er koden som lar deg skrive og putte inn informashon inn i databasen med hjelp av flask-->
+    {% include 'menu.html' %}
+    <form action="{{url_for('addrec')}}" method="POST">
+        <h3>Student information</h3>
+        username<br>
+        <input type="text" name="username"><br>
+        pwd<br>
+        <input type="text" name="pwd"><br>
+        phone number <br>
+        <input type="numeric" name="number"><br>
+        epost <br>
+        <input type="text" name="epost"><br>
+        <input type="submit" value="submit"><br>
+    </form>
+    <a href="/">Go home</a><br><br>
+    {% include 'footer.html' %}
+</body>
+</html>
