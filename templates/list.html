@@ -14,26 +14,32 @@ table, th, td {
 <body>
     <!-- denne siden vis databasen men viser ikke personen passord for personens sikkerhet-->
     {% include 'menu.html' %}
-    <table style="width:70%">
-        <thead>
-            <td>username</td>
-            <td>phone number</td>
-            <td>epost</td>
-        </thead>
+    <table>
+        <tr> 
+            <td>
+                <table style="width:70%">
+                    <thead>
+                        <td>username</td>
+                        <td>phone number</td>
+                        <td>epost</td>
+                    </thead>
+                
+                    {% for row in rows %}
+                
+                    <tr>
+                        <td>{{row['username']}}</td>
+                        <td>{{row['number']}}</td>
+                        <td>{{row['epost']}}</td>
+                      </tr>
 
-        {% for row in rows %}
-
-        <tr>
-            <td>{{row['username']}}</td>
-            <td>{{row['number']}}</td>
-            <td>{{row['epost']}}</td>
+                    {% endfor %}
+                </table>
+                <a href="/"><button>home</button></a><br><br>
+                <br>
+                <br>
+            </td>
         </tr>
-
-        {% endfor %}
     </table>
-    <a href="/"><button>home</button></a><br><br>
-    <br>
-    <br>
     {% include 'footer.html' %}
 </body>
 </html>
